@@ -8,7 +8,8 @@
 int main(void)
 {
 	uint32_t value = 0;
-	uint32_t *p = (uint32_t *)SRAM_ADDRESS1;
+	// tell the coompiler not to optimoise reads to this var
+	uint32_t  volatile *p = (uint32_t *)SRAM_ADDRESS1;
 
 	while(1)
 	{
@@ -17,6 +18,6 @@ int main(void)
 
 	}
 
-	while(1;)
+	while(1);
 	return 0;
 }
